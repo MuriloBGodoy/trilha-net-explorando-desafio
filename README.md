@@ -19,3 +19,30 @@ O seu programa deverá cálcular corretamente os valores dos métodos da classe 
 
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## ✅ Implementação realizada
+Todos os "TODO" da classe `Reserva` foram implementados:
+
+- **CadastrarHospedes**: verifica se a capacidade da suíte comporta a quantidade de hóspedes; caso contrário, lança uma `InvalidOperationException` com mensagem explicativa.
+- **ObterQuantidadeHospedes**: retorna a quantidade total de hóspedes cadastrados.
+- **CalcularValorDiaria**: calcula `DiasReservados x Suite.ValorDiaria` e aplica **10% de desconto** quando a reserva é de 10 dias ou mais.
+
+O `Program.cs` demonstra os três cenários: reserva normal, reserva com desconto e tentativa de reserva acima da capacidade.
+
+```
+Hóspedes: 2
+Valor diária: 150
+
+Reserva de 10 dias (com 10% de desconto)
+Hóspedes: 2
+Valor diária: 270,00
+
+Erro ao cadastrar hóspedes: A suíte Premium comporta no máximo 2 hóspede(s), mas foram informados 3.
+```
+
+O projeto foi atualizado para **.NET 8** (com `RollForward` para rodar em versões mais novas do runtime).
+
+### Como executar
+```bash
+dotnet run
+```
